@@ -93,16 +93,10 @@ EOF
 
 Check [the example config YAML](config.example.yaml) on how to handle multiple databases with different access. Use this example YAML to also make your own config.yaml file, with your queries and gauge metrics.
 
-Build Docker image:
+Build Docker image and Run:
 
 ```shell
-docker build -t db2prompy .
-```
-
-Run a container:
-
-```shell
-docker run --name db2dexpo -it --env-file .env db2dexpo
+docker-compose up -d --build
 ```
 
 See the exported metrics:
