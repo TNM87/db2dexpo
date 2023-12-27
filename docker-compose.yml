@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  exporter-db2:
+    build:
+      context: .
+    container_name: db2dexpo
+    restart: always
+    ports:
+     -  "9877:9877"
+    env_file:
+     - .env:
